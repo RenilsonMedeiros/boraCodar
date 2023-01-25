@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  --bg-color: #0B0911;
+  --bg-color-aside: #130f1e;
+  --text-color: #ffffff;
+
+  --font-Inter: 'Inter', sans-serif;
+  --font-Roboto-400: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  height: 100vh;
+}
+
+body * {
+  color: var(--text-color);
+  font-family: var(--font-Roboto-400);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article, aside {
+  height: max(100vh, 640px);
+
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  background-color: var(--bg-color-aside);
+}
+
+section.infoText {
+  margin: 4vh 1vh 6vh 6vh;
+}
+
+section.infoText h1 {
+  font-family: var(--font-Inter);
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 1vh;
+}
+
+section.infoText p {
+  font-size: 1.2em;
+  color: #aeaeb0;
+}
+
+section.infoTable {
+  border: solid 3px #1c162c;
+  border-radius: 3px;
+  margin-left: 6vh;
+  margin-right: 3vh;
+}
+
+section.infoTable table {
+  font-size: 0.875em;
+  font-family: var(--font-Inter);
+  font-weight: 500;
+  
+  background-color: var(--bg-color);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+section.infoTable table tr {
+  text-align: center;
+}
+
+section.infoTable table tr th {
+  background-color: #1c162c;
+  font-size: 0.7em;
+  font-family: var(--font-Roboto-400);
+  font-weight: normal;
+}
+
+section.infoTable table tr:first-child th {
+  padding: 2vh 1vh 2vh 1vh;
+}
+section.infoTable table tr th:first-child {
+  padding: 2.3vh 1vh 2.3vh 1vh;
+}
+
+section.infoTable table tr td {
+  padding: 0.4em;
+}
+
+section.infoTable table tr td img#cursors {
+  width: 1.5em;
+  filter: invert(100%);
+}
+
+
+section.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+button {
+  font-family: var(--font-Inter);
+  font-size: 0.875em;
+  line-height: 1.5em;
+
+  padding: 0.75em 5.8em 0.75em 5.8em;
+  border: none;
+  border-radius: 1.5em;
+  margin: 1vh;
+}
+
+button#first {
+  background-color: #8257e5;
+  transition: all 0.2s;
+}
+
+button#first:hover {
+  background-color: #9b76f0;
+}
+
+button#second {
+  background-color: #3c3748;
+  transition: all 0.2s;
+}
+
+button#second:hover {
+  background-color: #ac8df5;
+  opacity: 0.5;
+}
+
+button#third {
+  background-color: #0b091100;
+  transition: all 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+
+button#third img {
+  width: 1em;
+}
+
+button#third:hover {
+  background-color: #bfa4fe;
+}
+
+button.hover#first {
+  background-color: #8b75bf;
+}
+
+button.hover#second {
+  background-color: #5e5b68;
+  transition: all 0.5s;
+}
+
+button.hover#second:hover {
+  background-color: #b799ff;
+  opacity: 1;
+}
+
+button.hover#third:hover  {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+
+button.focus#first {
+  border: 0.2em solid white;
+}
+
+button.focus#first:hover {
+  filter: brightness(1.2);
+}
+
+button.focus#second {
+  border: 0.2em solid white;
+}
+
+button.focus#second:hover {
+  border: 0.2em solid black;
+  filter: blur(1px);
+  opacity: 1;
+}
+
+button.focus#third {
+  border: 0.2em solid white;
+}
+
+button.disabled#first {
+  opacity: 0.5;
+  transition: 0s all;
+}
+
+button.disabled#first:hover {
+  filter: grayscale(20%);
+  cursor: not-allowed;
+}
+
+button.disabled#second {
+  opacity: 0.5;
+  transition: 0.3s all;
+}
+
+button.disabled#second:hover {
+  background-color: white;
+  color: black;
+  cursor: not-allowed;
+}
+
+button.disabled#third {
+  opacity: 0.5;
+  transition: 0.6s all;
+  position: relative;
+}
+
+button.disabled#third:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0;
+  border-radius: 1.5em;
+  background-color: #ac8df559;
+  transition: 0.8s all ease;
+}
+
+button.disabled#third:hover {
+  background-color: #1c162c00;
+  cursor: not-allowed;
+}
+
+button.disabled#third:hover:before {
+  width: 100%;
+}
+
+button.loading, button.loading, button.movable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+} 
+
+button.loading#first:hover {
+  background-color: #8257e5;
+  cursor: progress;
+}
+
+button.loading#second:hover {
+  background-color: #3c3748;
+  opacity: 1;
+  cursor: progress;
+}
+
+button.loading#third:hover {
+  background-color: #0b091100;
+  cursor: progress;
+}
+
+button.movable:hover {
+  cursor: move;
+}
