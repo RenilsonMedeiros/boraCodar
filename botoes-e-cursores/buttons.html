@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>buttons and cursors</title>
+</head>
+<body>
+  <main>
+    <article class="buttonCursor-type">
+      <section class="infoText">
+        <h1>Tipos de botão</h1>
+        <p>
+          Dentro de um layout, botões servem para destacar ações importantes a serem 
+          tomadas.<br> Acompanhe abaixo um exemplo de tipos e propriedades.
+        </p>
+      </section>
+
+      <section class="infoTable">
+        <table>
+          <tr>
+            <th>&nbsp</th>
+            <th>BOTÃO PRIMÁRIO</th>
+            <th>BOTÃO SECUNDÁRIO</th>
+            <th>BOTÃO TERCIÁRIO</th>
+            <th>CURSOR</th>
+          </tr>
+          <tr>
+            <th>DEFAULT</th>
+            <td><button id="first">DEFAULT PRIMARY</button></td>
+            <td><button id="second">DEFAULT SECONDARY</button></td>
+            <td><button id="third">DEFAULT TERTIARY</button></td>
+            <td><img id="cursors" src="assets/defaultcursor.svg" alt="Default cursor"></td>
+          </tr>
+          <tr>
+            <th>HOVER</th>
+            <td><button class="hover" id="first">HOVER PRIMARY</button></td>
+            <td><button class="hover" id="second">HOVER SECONDARY</button></td>
+            <td><button class="hover" id="third">HOVER TERTIARY</button></td>
+            <td><img id="cursors" src="assets/defaultcursor.svg" alt="Hover cursor"></td>
+          </tr>
+          <tr>
+            <th>FOCUS</th>
+            <td><button class="focus" id="first">FOCUS PRIMARY</button></td>
+            <td><button class="focus" id="second">FOCUS SECONDARY</button></td>
+            <td><button class="focus" id="third">FOCUS TERTIARY</button></td>
+            <td><img id="cursors" src="assets/defaultcursor.svg" alt="Focus cursor"></td>
+          </tr>
+          <tr>
+            <th>DISABLED</th>
+            <td><button class="disabled" id="first">DISABLED PRIMARY</button></td>
+            <td><button class="disabled" id="second">DISABLED SECONDARY</button></td>
+            <td><button class="disabled" id="third">DISABLED TERTIARY</button></td>
+            <td><img id="cursors" src="assets/disabledcursor.png" alt="Disabled cursor"></td>
+          </tr>
+          <tr>
+            <th>LOADING</th>
+            <td><button class="loading" id="first"><img src="assets/loading.png"> LOADING PRIMARY</button></td>
+            <td><button class="loading" id="second"><img src="assets/loading.png"> LOADING SECONDARY</button></td>
+            <td><button class="loading" id="third"><img src="assets/loading.png"> LOADING TERTIARY</button></td>
+            <td><img id="cursors" src="assets/loadingcursor.png" alt="Loading cursor"></td>
+          </tr>
+          <tr>
+            <th>MOVABLE</th>
+            <td><button class="movable" id="first"><img src="assets/menu.png"> MOVABLE PRIMARY</button></td>
+            <td><button class="movable" id="second"><img src="assets/menu.png"> MOVABLE SECONDARY</button></td>
+            <td><button class="movable" id="third"><img src="assets/menu.png"> MOVABLE TERTIARY</button></td>
+            <td><img id="cursors" src="assets/movablecursor.png" alt="Movable cursor"></td>
+          </tr>
+        </table>
+      </section>
+    </article>
+
+    <aside class="buttonCursor-test">
+      <section class="infoText">
+        <h1>Teste os botões</h1>
+        <p>Interaja com os botões e observe a <br>mudança de aparência e de cursores</p>
+      </section>
+
+      <section class="buttons">
+        <button id="first">INTERAJA COMIGO</button>
+        <button id="second">INTERAJA COMIGO</button>
+        <button id="third"><img src="/assets/menu.png">INTERAJA COMIGO</button>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>
