@@ -42,6 +42,12 @@ header .profile-container {
 header .profile-container img#close {
   margin-top: auto;
   margin-bottom: auto;
+
+  transition: all 0.2s ease;
+}
+
+header .profile-container img#close:hover {
+  filter:brightness(0.8);
   cursor: pointer;
 }
 
@@ -149,28 +155,10 @@ footer .send-message {
 footer .send-message img {
   width: 1.8em;
   filter: invert(60%);
+
+  transition: all 0.3s ease;
+}
+footer .send-message img:hover {
+  filter: invert(95%);
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-/* .profile .profile-info #dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--text-status-color);
-} */
-
-
-
-
-
-/* header section.last-seen {
-  display: flex;
-  justify-content: center;
-} */
