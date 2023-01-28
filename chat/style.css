@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  --bg-color: #1a1924;
+  --bg-message-user-color: #633bbc;
+  --bg-message-person-color: #07847e;
+  --bg-message-input-color: #282843;
+  --text-color: #e1e1e6;
+  --text-status-color: #00b37e;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: var(--bg-color);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2.75vh 7.5vw;
+}
+
+body * {
+  color: var(--text-color);
+}
+
+p {
+  font-size: 0.75em;
+  color: var(--text-color);
+}
+
+header .profile-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .profile-container img#close {
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+}
+
+.profile img#user {
+  filter: invert(100%);
+  border-radius: 100%;
+  margin-right: 16px;
+}
+
+.profile .profile-info {
+  margin-top: auto;
+  margin-bottom: auto;
+
+  
+}
+
+.profile .profile-info p#username {
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profile .profile-info p:nth-last-child(1) {
+  color: var(--text-status-color);
+
+  margin-left: 12px;
+  position: relative;
+}
+
+.profile .profile-info p:nth-last-child(1):before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-status-color);
+
+  top: 3px;
+  left: -12px;
+}
+
+header .last-seen p {
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+
+main div {
+  margin-bottom: 30px;
+}
+
+main div p#message {
+  margin-top: 10px;
+  background-color: var(--bg-message-person-color);
+
+  padding: 14px;
+  border-radius: 0 8px 8px 8px;
+
+  width: fit-content;
+}
+
+main div.user p#message {
+  background-color: var(--bg-message-user-color);
+  border-radius: 8px 0px 8px 8px;
+  
+  margin-left: auto;
+}
+
+main div.user p#info {
+  text-align: end;
+}
+
+footer {
+  position: relative;
+  margin-top: 1.5em;
+  display: flex;
+}
+
+footer .write-message {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 0.875em 1.5em;
+
+  flex-grow: 1;
+  
+  background-color: var(--bg-message-input-color);
+}
+
+footer .send-message {
+  background-color: transparent;
+  border: none;
+  width: 1.67em;
+
+  position: absolute;
+  top: 7.3px;
+  right: 24px;
+}
+
+footer .send-message img {
+  width: 1.8em;
+  filter: invert(60%);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* .profile .profile-info #dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--text-status-color);
+} */
+
+
+
+
+
+/* header section.last-seen {
+  display: flex;
+  justify-content: center;
+} */

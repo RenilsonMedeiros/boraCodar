@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+</head>
+<body>
+  <header>
+    <section class="profile-container">
+      <div class="profile">
+        <img id="user" src="assets/user.svg" alt="Profile Picture">
+        <div class="profile-info">
+          <p id="username">Renilson Medeiros</p>
+          <p>Online</p>
+        </div>
+      </div>
+      
+      <img src="assets/close.svg" alt="Close" id="close">
+    </section>
+
+    <section class="last-seen">
+      <p>Hoje 11:30</p>
+    </section>
+  </header>
+
+  <main>
+    <div class="person">
+      <p id="info">Renilson - 11:30h</p>
+      <p id="message">Tive uma ideia incrível para um projeto! <3</p>
+    </div>
+
+    <div class="user">
+      <p id="info">Você - 11:32</p>
+      <p id="message">Sério? Me conta mais.</p>
+    </div>
+
+    <div class="person">
+      <p id="info">Renilson - 11:34h</p>
+      <p id="message">e se a gente fizesse um chat moderno e responsivo em apenas uma semana?</p>
+    </div>
+
+    <div class="user">
+      <p id="info">Você - 11:36</p>
+      <p id="message"><strong>#boraCodar!</strong></p>
+    </div>
+  </main>
+
+  <footer>
+    <input type="text" class="write-message" placeholder="Digite sua mensagem">
+    <button class="send-message"><img src="assets/send.svg" alt="Send Message Icon"></button>
+  </footer>
+</body>
+</html>
