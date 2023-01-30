@@ -64,8 +64,6 @@ header .profile-container img#close:hover {
 .profile .profile-info {
   margin-top: auto;
   margin-bottom: auto;
-
-  
 }
 
 .profile .profile-info p#username {
@@ -129,6 +127,7 @@ footer {
   position: relative;
   margin-top: 1.5em;
   display: flex;
+  padding-bottom: 0.5em;
 }
 
 footer .write-message {

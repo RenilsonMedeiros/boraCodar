@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, jsonify, request
+from flask import Flask, make_response, jsonify
+from flask_cors import cross_origin
 
 app = Flask(__name__)
 
@@ -62,7 +63,7 @@ class Answer:
       return 'tente outra coisa, ex: some algo'
 
 def generateMessage(userMessage):
-  answer = Answer(messages);
+  answer = Answer(messages)
   chosenMessage = answer.chooseMessage(userMessage) 
   functionMessage = answer.executeFunction(userMessage, chosenMessage['function'], chosenMessage['tag'])
 
@@ -70,11 +71,12 @@ def generateMessage(userMessage):
   
   return finalMessage
 
-# userMessage = "oi, some para mim 16 com 1"
 @app.route('/ai/<string:usermessage>', methods=['GET'])
+@cross_origin()
 def toAnswerUserMessage(usermessage):
   responseAi = generateMessage(usermessage)
-  return responseAi
+  
+  return make_response(jsonify({"ai": responseAi}), 200)
 
 app.run(port=5000, host='localhost', debug=True)
 

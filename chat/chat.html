@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
+  <script defer src="script.js"></script>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,30 +34,15 @@
   </header>
 
   <main>
-    <div class="person">
-      <p id="info">Renilson - 11:30h</p>
-      <p id="message">Tive uma ideia incrível para um projeto! <3</p>
-    </div>
-
-    <div class="user">
-      <p id="info">Você - 11:32</p>
-      <p id="message">Sério? Me conta mais.</p>
-    </div>
-
-    <div class="person">
-      <p id="info">Renilson - 11:34h</p>
-      <p id="message">e se a gente fizesse um chat moderno e responsivo em apenas uma semana?</p>
-    </div>
-
-    <div class="user">
-      <p id="info">Você - 11:36</p>
+    <div id="person" class="person">
+      <p id="info">Renilson - 11:36</p>
       <p id="message"><strong>#boraCodar!</strong></p>
     </div>
   </main>
 
   <footer>
-    <input type="text" class="write-message" placeholder="Digite sua mensagem">
-    <button class="send-message"><img src="assets/send.svg" alt="Send Message Icon"></button>
+    <input id="write-message" type="text" class="write-message" placeholder="Digite sua mensagem">
+    <button id="send-message" class="send-message"><img src="assets/send.svg" alt="Send Message Icon"></button>
   </footer>
 </body>
 </html>
