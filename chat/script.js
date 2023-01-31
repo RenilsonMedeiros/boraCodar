@@ -34,7 +34,7 @@ async function requestResponseAi() {
   if(userMessage.value.trim().length != 0) {
     addMessageInChat('user', userMessage.value)
 
-    let response = await fetch(`http://localhost:5000/ai/${userMessage.value}`, {
+    let response = await fetch(`https://renilsonmedeiros.github.io/boraCodar/chat/chatapi.py/ai/${userMessage.value}`, {
       method: 'GET',
       mode: 'cors',
     }).then(response => response.json()
