@@ -40,6 +40,7 @@ async function requestResponseAi() {
     }).then(response => response.json()
     ).catch(err => {
       console.log(err)
+      userMessage.value = ''
       return null
     })
 
