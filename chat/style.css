@@ -17,12 +17,14 @@
 
 body{
   background-color: var(--bg-color);
-  height: 100vh;
+  height: 94vh;
 
   display: flex;
   flex-direction: column;
 
   padding: 2.75vh 7.5vw;
+
+  overflow: hidden;
 }
 
 body * {
@@ -96,6 +98,15 @@ header .last-seen p {
   text-align: center;
   margin-top: 14px;
   margin-bottom: 30px;
+}
+
+main {
+  overflow-y: scroll;
+  
+}
+
+main::-webkit-scrollbar {
+  display: none;
 }
 
 main div {
