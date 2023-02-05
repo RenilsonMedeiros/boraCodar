@@ -119,8 +119,14 @@ body {
   filter: brightness(1.4);
 }
 
+.keyboard button i {
+  margin-top: 0.6rem;
+  margin-left: 0.1rem;
+  font-size: 2.8rem;
+}
+
 @media screen and (max-width: 390px) {
-    :root {
-      font-size: 50%;
-    }
+  :root {
+    font-size: 50%;
+  }
 }
