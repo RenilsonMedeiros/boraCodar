@@ -1,4 +1,5 @@
 const keyboard = document.getElementById('keyboard')
+const buttonList = document.querySelectorAll('button')
 const panelCalculation = document.getElementById('calculation-text')
 const panelResult = document.getElementById('calculation-result')
 
@@ -95,25 +96,30 @@ function chooseOperator(targetOperator) {
 }
 
 function equal() {
-  var numberA = handleDotsAndCommas(calculator.numberA)
-  var numberB = handleDotsAndCommas(panelResult.innerHTML)
-  var result = calculator[calculator.operation](numberA, numberB)
+  if(operatorChosen) {
+    operatorChosen = false
 
+    var numberA = handleDotsAndCommas(calculator.numberA)
+    var numberB = handleDotsAndCommas(panelResult.innerHTML)
+    var result = calculator[calculator.operation](numberA, numberB)
   
-  panelCalculation.innerHTML += convertToBrasilNumberFormat(numberB)
-  panelResult.innerHTML = convertToBrasilNumberFormat(result)
+    
+    panelCalculation.innerHTML += convertToBrasilNumberFormat(numberB)
+    panelResult.innerHTML = convertToBrasilNumberFormat(result)
+  }
 }
 
 function clear() {
-  panelCalculation.innerHTML = ''
-  panelResult.innerHTML = ''
+  panelCalculation.innerHTML = '0'
+  panelResult.innerHTML = '0'
 }
 
 function backspace() {
     var panelNumber = String(handleDotsAndCommas(panelResult.innerHTML))
     panelNumber = panelNumber.slice(0, panelNumber.length-1)
-    isFloatNumber = convertToBrasilNumberFormat(parseFloat(panelNumber)) != 'NaN'
-    panelResult.innerHTML = isFloatNumber ? panelNumber : '' 
+    var panelNumberConverted = convertToBrasilNumberFormat(parseFloat(panelNumber))
+    isFloatNumber = panelNumberConverted != 'NaN'
+    panelResult.innerHTML = isFloatNumber ? panelNumberConverted : '' 
 }
 
 function percent(numberA, numberB) {
@@ -140,5 +146,32 @@ function division(numberA, numberB) {
   var result = numberA / numberB
   return result
 }
+
+function keyEvent(event) {
+  var key = event.which;
+  var keychar = String.fromCharCode(key);
+
+  buttonList.forEach(button => {
+    if(button.id == 'number' && !event.shiftKey) {
+      if(button.innerHTML == ',' && key == '188') button.click()
+      if(button.innerHTML == keychar) button.click()
+
+    } else if(button.classList.contains('operator')) {
+      if(event.shiftKey) {
+        if(button.id == 'percent' && key == '53') button.firstChild.click()
+        if(button.id == 'multiply' && key == '56') button.firstChild.click()
+        if(button.id == 'sum' && key == '187') button.firstChild.click()
+
+      } else if(button.id == 'equal' && key == '13') button.firstChild.click()
+        else if(button.id == 'subtraction' && key == '189') button.firstChild.click()
+        else if(button.id == 'division' && key == '193') button.firstChild.click()
+    }
+      else if(button.id == 'clear' && key == '46') button.click()
+      else if(button.id == 'backspace' && key == '8') button.click()
+      else if(button.id == 'plus-minus' && keychar == 'N') button.click()
+  });
+}
+
+document.onkeyup = keyEvent
 
 keyboard.addEventListener('click', keyPressed)
