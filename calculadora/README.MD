@@ -1,4 +1,4 @@
-# :joystick: Desafio Botões e Cursores
+# :joystick: Desafio Calculadora
 Uma gif animada de como ficou o projeto:
 <p align="center">
   <img src="https://github.com/RenilsonMedeiros/boraCodar/blob/master/calculadora/assets/projeto.gif">
