@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  --text-color-100: #5C5C5C;
+  --text-color-200: #333333;
+  --text-color-300: #1F1F1F;
+  --text-color-500: #633BBC;
+
+  font-size: 62.5%;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background: linear-gradient(167.96deg, #8257E5 0%, #271A45 100%) fixed;
+  font-size: 1.6rem;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.align-center {
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background-color: transparent;
+  position: relative;
+}
+
+.app-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.boarding-qrcode {
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.warning #warning-text {
+  text-align: center;
+}
+
+footer p {
+  width: 27rem;
+  text-align: center;
+
+  color: white;
+  opacity: 64%;
+}
+
+header p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.app section {
+  padding: 2.4rem 3.2rem;
+}
+
+section.body {
+  border: 2px dashed rgb(0, 0, 0, 0.32);
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  background-color: white;
+
+  /* -webkit-mask-image: url(assets/mask.svg), linear-gradient(#000, #000);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: -12px -12px, 0 0;
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-out; */
+}
+
+section.top {
+  background-color: white;
+  border-radius: 2.4rem 2.4rem 0 0;
+}
+
+section.bottom {
+  background-color: white;
+  border-radius: 0 0 2.4rem 2.4rem;
+}
+
+.color-100 {
+  color: var(--text-color-100);
+}
+
+.color-200 {
+  color: var(--text-color-200);
+}
+
+.color-300 {
+  color: var(--text-color-300);
+}
+
+.size-14 {
+  font-size: 1.4rem;
+}
+
+.size-40 {
+  font-size: 4rem;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+#hour-to {
+  position: relative;
+}
+
+#hour-to::after {
+  content: '+1';
+  position: absolute;
+  display: block;
+  font-size: 1rem;
+  top: 0;
+  right: -1rem;
+}
+
+main.app {
+  gap: 0;
+}
+
+section.bottom {
+  gap: 2.4rem;
+}
+
+section.bottom .boarding {
+  padding-right: 3rem;
+}
+
+#hour {
+  padding: 4px 8px;
+  background-color: var(--text-color-500);
+  border-radius: 8px;
+  color: white;
+  width: fit-content;
+  margin-top: 2px;
+}
+
+#qrcode-logo {
+  margin: 1rem;
+  width: 14rem;
+}
+
+#boarding-group {
+  text-align: center;
+}
+
+section.bottom .qrcode {
+  gap: 0;
+}
+
+@media screen and (max-width: 425px) {
+  :root {
+    font-size: 54%;
+  }
+
+  main.app section {
+    border-radius: 2.4rem;
+  }
+}

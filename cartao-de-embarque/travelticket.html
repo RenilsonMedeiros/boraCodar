@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartão de Embarque</title>
+</head>
+<body>
+  <div class="app align-center">
+    <header>
+      <p>Cartão de embarque</p>
+    </header>
+
+    <main class="app">
+      <section class="app top">
+        <div class="value-date-city">
+          <div class="app-row color-100 size-14">
+            <p>Voo</p>
+            <p>Data</p>
+          </div>
+          <div class="app-row color-200 weight-500">
+            <p id="value">RS995</p>
+            <p id="date">23/05/2023</p>
+          </div>
+        </div>
+        <div class="location-travel">
+          <div class="app-row color-100 size-14">
+            <p id="country-from">São Paulo, Brasil</p>
+            <p id="country-to">São Francisco, EUA</p>
+          </div>
+          <div class="app-row color-300 size-40 weight-500">
+            <p id="city-from">GRU</p>
+            <i class="ph-airplane-in-flight"></i>
+            <p id="city-to">SFO</p>
+          </div>
+          <div class="app-row color-200">
+            <p id="hour-from">17:00</p>
+            <p id="hour-to">04:48</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="body">
+        <div class="passenger">
+          <div class="app-row color-100 size-14">
+            <p>Passageiro</p>
+            <p>Assento</p>
+          </div>
+          <div class="app-row color-300 weight-500">
+            <p id="value">Renilson Medeiros</p>
+            <p id="date">28A</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="app bottom">
+        <div class="app-row boarding-qrcode">
+          <div class="app boarding">
+            <div>
+              <p class="color-100 size-14">Embarque</p>
+              <p class="weight-500" id="hour">16:15</p>
+            </div>
+            <div>
+              <p class="color-100 size-14">Terminal</p>
+              <p class="weight-500" id="terminal">2</p>
+            </div>
+            <div>
+              <p class="color-100 size-14">Portão</p>
+              <p class="weight-500" id="port">15</p>
+            </div>
+          </div>
+          <div class="app qrcode">
+            <img src="assets/qrcode-logo.svg" alt="Imagem de um QRcode" id="qrcode-logo">
+            <p class="color-100 size-14" id="boarding-group">Grupo de embarque 3</p>
+          </div>
+        </div>
+        <div class="warning">
+          <p class="color-300" id="warning-text"><strong>Atenção:</strong> o portão fecha 16:45</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Qualquer problema procure o balcão de atendimento da sua 
+        companhia aérea</p>
+    </footer>
+  </div>
+</body>
+</html>
