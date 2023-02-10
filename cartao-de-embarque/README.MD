@@ -1,7 +1,7 @@
 # :joystick: Desafio Cartão de Embarque
 Uma foto de como ficou o projeto:
 <p align="center">
-  <img src="https://github.com/RenilsonMedeiros/boraCodar/blob/master/calculadora/assets/projeto.png">
+  <img src="https://github.com/RenilsonMedeiros/boraCodar/blob/master/cartao-de-embarque/assets/projeto.png">
 </p>
 
 ## Desafio
