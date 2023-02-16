@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  --bg-color-primary: #ffffff;
+  --bg-color-secondary: #f8f8ff;
+  --text-color-primary: #121214;
+  --text-color-secondary: #e45858;
+  --text-color-terciary: #7c7c8a;
+  --input-color: #f4f4ff;
+  --button-color: #6246ea;
+  
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body * {
+  font-size: 1.6rem;
+  color: var(--text-color-primary);
+}
+
+body {
+  background-color: var(--bg-color-primary);
+}
+
+#block-search {
+  background-color: var(--bg-color-secondary);
+  margin-bottom: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+
+#block-search img.icon-design.one {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#block-search img.icon-design.two {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+#block-search #content {
+  text-align: center;
+  margin: 10rem 2.4rem;
+  z-index: 1;
+}
+
+#block-search #content h2 {
+  color: var(--text-color-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 2.56rem;
+  margin-bottom: 1.8rem;
+}
+
+#block-search #content h1, #block-search #content h1 span {
+  max-width: 64.7rem;
+  margin: auto;
+  font-size: 4.8rem;
+  margin-bottom: 4rem;
+}
+
+#block-search #content h1 span {
+  color: var(--button-color);
+}
+
+.flex-row {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+form#find-block-input {
+  background-color: var(--bg-color-primary);
+  gap: 2.4rem;
+  padding: min(8vw, 4rem);
+  
+
+  border: 1px solid #eaeaea;
+  border-radius: 1rem;
+}
+
+form#find-block-input div {
+  background-color: var(--input-color);
+  padding: 1.2rem .8rem 1.2rem 1.4rem;
+  border-radius: .5rem;
+  
+  flex-wrap: nowrap;
+  flex-grow: 1;
+}
+
+form#find-block-input div input, form#find-block-input div select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-color-terciary);
+  
+}
+
+form#find-block-input button {
+  background-color: var(--button-color);
+  padding: 1.2rem 3.2rem;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: var(--bg-color-primary);
+  text-transform: uppercase;
+
+  flex-grow: 1;
+
+  transition: ease 0.2s;
+}
+
+form#find-block-input button:hover {
+  cursor: pointer;
+  filter: opacity(80%);
+}
+
+#block-list {
+  padding: 0 10vw 8vh 10vw;
+}
+
+#block-list .title-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4rem;
+}
+
+#block-list .title-nav p {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 140%;
+
+  flex-grow: 1;
+}
+
+#block-list .title-nav nav {
+  padding: .8rem;
+
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  justify-items: center;
+}
+
+#block-list .title-nav nav a {
+  background-color: var(--button-color);
+  color: var(--bg-color-primary);
+  padding: .4rem 2.4rem;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#block-list .title-nav nav a:hover {
+  text-decoration: underline;
+}
+
+#block-list .title-nav nav a#map {
+  background-color: transparent;
+  color: var(--button-color);
+}
+
+#block-list .block-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+  justify-content: space-around;
+}
+
+#block-list .block-cards .card {
+  border: 1px solid #EAEAEA;
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+#block-list .block-cards .card header {
+  background: url('./assets/imgcards/01.svg');
+  background-size: cover;
+  background-position-y: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: 15rem;
+  border: 1px solid #eaeaea;
+  border-radius: 1rem 1rem 0 0;
+}
+
+#block-list .block-cards .card main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  padding: 1.6rem;
+}
+
+#block-list .block-cards .card p {
+  color: rgba(0, 0, 0, 0.75)
+}
+
+#block-list .block-cards .card p.title {
+  color: var(--text-color-primary);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 140%;
+}
+
+#block-list .block-cards .card p.description {
+  line-height: 160%;
+  max-width: 36.4rem;
+}
+
+#block-list .block-cards .card div.location {
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+  line-height: 160%;
+}
+
+@media screen and (max-width: 700px) {
+  #block-list .title-nav p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  #block-search img.icon-design {
+    width: 20rem;
+  }
+}
