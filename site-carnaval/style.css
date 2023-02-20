@@ -10,16 +10,32 @@
   --text-color-primary: #121214;
   --text-color-secondary: #e45858;
   --text-color-terciary: #7c7c8a;
+  --text-color-quartiary: rgba(0, 0, 0, 0.75);
   --input-color: #f4f4ff;
   --button-color: #6246ea;
+  --toggle-color: #d9d9d9;
+  --url-image-01: url('./assets/imgcards/01.svg');
   
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
 }
 
+.dark:root {
+  --bg-color-primary: #090909;
+  --bg-color-secondary: #2b2c34;
+  --text-color-primary: #f4f4ff;
+  --text-color-secondary: #e45858;
+  --text-color-terciary: #f4f4f4;
+  --text-color-quartiary: rgba(255, 255, 255, 0.75);
+  --input-color: #2b2c34;
+  --button-color: #00ff88;
+  --toggle-color: #f8f8ff;
+}
+
 body * {
   font-size: 1.6rem;
   color: var(--text-color-primary);
+  transition: background 0.2s linear;
 }
 
 body {
@@ -54,6 +70,59 @@ body {
   text-align: center;
   margin: 10rem 2.4rem;
   z-index: 1;
+}
+
+#theme-toggler {
+  margin-bottom: 2rem;
+}
+
+#theme-toggler label div {
+  background-color: var(--toggle-color);
+  width: 6.8rem;
+  height: 3.1rem;
+  border-radius: 1.55rem;
+  margin: auto;
+  position: relative;
+
+  cursor: pointer;
+}
+
+#theme-toggler label div .circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--bg-color-secondary);
+  position: absolute;
+  left: .3rem;
+  top: .3rem;
+
+  transform: translate(0px);
+  transition: transform 0.3s ease;
+}
+
+#theme-toggler label > div::after {
+  content:'Light';
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3rem;
+  color: #2b2c34;
+  position: absolute;
+  right: .9rem;
+  top: calc(1.55rem - 0.6rem);
+
+  transition: transform 0.3s ease;
+}
+
+#dark-mode-input {
+  display: none;
+}
+
+#dark-mode-input:checked ~ label div .circle {
+  transform: translate(3.7rem);
+}
+
+#dark-mode-input:checked ~ label > div::after {
+  content: 'Dark';
+  transform: translate(-2.5rem);
 }
 
 #block-search #content h2 {
@@ -105,8 +174,11 @@ form#find-block-input div input, form#find-block-input div select {
   background: transparent;
   border: none;
   outline: none;
+}
+
+form#find-block-input div input::placeholder,
+form#find-block-input div select {
   color: var(--text-color-terciary);
-  
 }
 
 form#find-block-input button {
@@ -154,7 +226,7 @@ form#find-block-input button:hover {
 #block-list .title-nav nav {
   padding: .8rem;
 
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   border-radius: 6px;
   justify-items: center;
 }
@@ -213,7 +285,7 @@ form#find-block-input button:hover {
 }
 
 #block-list .block-cards .card p {
-  color: rgba(0, 0, 0, 0.75)
+  color: var(--text-color-quartiary);
 }
 
 #block-list .block-cards .card p.title {
