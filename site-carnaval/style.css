@@ -260,19 +260,16 @@ form#find-block-input button:hover {
 }
 
 #block-list .block-cards .card {
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   border-radius: 1rem;
   width: fit-content;
+  display: none;
 }
 
 #block-list .block-cards .card header {
-  background: url('./assets/imgcards/01.svg');
-  background-size: cover;
-  background-position-y: center;
   width: 100%;
   box-sizing: border-box;
   height: 15rem;
-  border: 1px solid #eaeaea;
   border-radius: 1rem 1rem 0 0;
 }
 
