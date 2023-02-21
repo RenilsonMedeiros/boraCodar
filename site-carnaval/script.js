@@ -40,8 +40,6 @@ function querySelect(event) {
   })
 
   showCards.forEach(card => {
-    console.log(card.querySelector('.city').innerText)
-    console.log(queryCity)
     if(card.querySelector('.city').innerText != queryCity
     ) {
       hiddenCards.push(card)

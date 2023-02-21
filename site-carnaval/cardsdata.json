@@ -7,7 +7,6 @@
     "city": "São Paulo",
     "state": "SP"
   },
-
   {
     "id": "2",
     "img": "./assets/imgcards/02.svg",
@@ -15,5 +14,37 @@
     "description": "Lorem dolor sit amet consectetur adipisicing elit. adipisicing elit adipisicing elit.",
     "city": "Florianópolis",
     "state": "SC"
+  },
+  {
+    "id": "3",
+    "img": "./assets/imgcards/03.svg",
+    "title": "Hoje dou exception",
+    "description": "Lorem dolor sit amet consectetur adipisicing elit. adipisicing elit adipisicing elit.",
+    "city": "Curitiba",
+    "state": "PR"
+  },
+  {
+    "id": "4",
+    "img": "./assets/imgcards/04.svg",
+    "title": "Manda Node",
+    "description": "Lorem dolor sit amet consectetur adipisicing elit. adipisicing elit adipisicing elit.",
+    "city": "Salvador",
+    "state": "BA"
+  },
+  {
+    "id": "5",
+    "img": "./assets/imgcards/05.svg",
+    "title": "Pimenta no C# dos outros é refresco",
+    "description": "Lorem dolor sit amet consectetur adipisicing elit. adipisicing elit adipisicing elit.",
+    "city": "Rio de Janeiro",
+    "state": "RJ"
+  },
+  {
+    "id": "6",
+    "img": "./assets/imgcards/06.svg",
+    "title": "Não valho nada mas JAVA li",
+    "description": "Lorem dolor sit amet consectetur adipisicing elit. adipisicing elit adipisicing elit.",
+    "city": "São Luís",
+    "state": "MA"
   }
 ]
