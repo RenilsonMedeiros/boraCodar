@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+</head>
+<body class="grid-center">
+  <div class="grid-center app">
+    <section id="card-1" class="flex column-center">
+      <div class="top">
+        <span class="title">NPS geral</span>
+      </div>
+      <div class="middle flex column-center">
+        <img src="./assets/excelent-icon.svg" alt="Excelent Icon" id="excelentIcon">
+        <span class="title">Excelente</span>
+      </div>
+      <div class="bottom flex">
+        <span class="key">NPS Score</span>
+        <span id="score" class="value">75</span>
+      </div>
+    </section>
+
+    <section id="card-2" class="flex column-center">
+      <div class="top">
+        <span class="title">Vendas fechadas</span>
+      </div>
+      <div class="middle">
+        <img src="./assets/chart-1.svg" alt="Chart Sell">
+      </div>
+      <div class="bottom flex">
+        <div id="planned" class="flex">
+          <span class="key">Esperado</span>
+          <span class="value">100</span>
+        </div>
+        <div id="realized" class="flex">
+          <span class="key">Alcançado</span>
+          <span class="value">70</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="card-3" class="flex column-center">
+      <div class="top">
+        <span class="title">Meta mensal</span>
+      </div>
+      <div class="middle">
+        <img src="./assets/chart-2.svg" alt="Month Target">
+      </div>
+      <div class="bottom flex">
+        <div id="planned" class="flex">
+          <span class="key">Esperado</span>
+          <span class="value">R$ 70K</span>
+        </div>
+        <div id="realized" class="flex">
+          <span class="key">Alcançado</span>
+          <span class="value">R$ 63K</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="card-4" class="flex column-center">
+      <div class="top">
+        <span class="title">Vendas por dia da semana</span>
+      </div>
+      <div class="middle flex">
+        <div class="left flex column-center">
+          <div class="flex column-center">
+            <span class="key flex">Dia com mais vendas</span>
+            <span class="value">quarta-feira</span>
+          </div>
+          <div class="flex column-center">
+            <span class="key flex">Dia com menos vendas</span>
+            <span class="value">domingo</span>
+          </div>
+        </div>
+
+        <div class="right">
+          <img src="./assets/chart-3.svg" alt="bar chart">
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

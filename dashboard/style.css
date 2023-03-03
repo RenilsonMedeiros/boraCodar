@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #292738;
+  --bg-color-card: #363447;
+  --text-color-primary: #FFFFFF;
+  --text-color-secondary: #81FBB8;
+  --text-color-terciary: #4A4556;
+  --icon-color-100: #81FBB8;
+  --icon-color-200: #FEB692;
+  --gradient-color-100: linear-gradient(121.94deg, #CE9FFC 15.98%, #7367F0 82.85%);
+  --gradient-color-200: linear-gradient(121.94deg, #DF9780 15.98%, #A66DE9 82.85%);
+  --gradient-color-300: linear-gradient(180deg, #90F7EC 0%, #32CCBC 100%);
+
+  font-family: 'Inter', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+  height: 100vh;
+  width: 100vw;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body * {
+  font-size: 1.6rem;
+
+  color: var(--text-color-primary);
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.flex {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.column-center {
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+.key {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.value {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+span {
+  line-height: 160%;
+}
+
+.app {
+  grid-template-columns: 29.6rem max-content max-content;
+  grid-template-rows: max-content max-content;
+  grid-template-areas: 
+  "c1 c2 c3"
+  "c4 c4 c4";
+
+  column-gap: 3.2rem;
+  row-gap: 5.9rem;
+}
+
+.app section {
+  text-align: center;
+  background-color: var(--bg-color-card);
+  box-shadow: .3rem .4rem 2.6rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.6rem;
+  padding: 2.9rem 4.8rem;
+  width: 100%;
+  height: 100%;
+  
+  transition: 0.2s ease
+}
+
+.app section:hover {
+  filter: brightness(1.2);
+}
+
+#card-1 {
+  grid-area: c1;
+}
+
+#card-1 .middle {
+  gap: 1.6rem;
+  padding-top: 4.45rem;
+  padding-bottom: 4.45rem;
+}
+
+#excelentIcon {
+  width: 5.4rem;
+  height: 5.4rem;
+}
+
+#card-1 .middle span {
+  color: var(--text-color-secondary);
+}
+
+#card-1 .bottom {
+  gap: 1rem;
+}
+
+#card-2 {
+  grid-area: c2;
+}
+
+#card-2 .bottom,
+#card-3 .bottom {
+  gap: 2rem;
+}
+
+#card-2 .bottom div,
+#card-3 .bottom div {
+  gap: 0;
+  align-items: center;
+}
+
+#card-2 .bottom div::before,
+#card-3 .bottom div::before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--text-color-terciary);
+}
+
+#card-2 .bottom div#realized::before {
+  background: var(--gradient-color-100);
+}
+
+#card-3 .bottom div#realized::before {
+  background: var(--gradient-color-200);
+}
+
+#card-2 .bottom div .key,
+#card-3 .bottom div .key {
+  margin-left: .4rem;
+  margin-right: 1rem;
+}
+
+#card-3 {
+  grid-area: c3;
+}
+
+
+#card-4 {
+  grid-area: c4;
+  text-align: start;
+  width: 100%;
+}
+
+#card-4,
+#card-4 .flex {
+  align-items: start;
+}
+
+#card-4 .middle {
+  width: 100%;
+  justify-content: space-between;
+}
+
+#card-4 .middle div div.flex {
+  gap: .8rem;
+}
+
+#card-4 .middle .left .value {
+  font-size: 2.4rem;
+}
+
+#card-4 .middle .left .key {
+  gap: .4rem;
+  align-items: center;
+}
+
+#card-4 .middle .left .key::before {
+  content: "";
+  border-left: .6rem solid transparent;
+  border-right: .6rem solid transparent;
+  border-top: 1.2rem solid;
+  color: var(--icon-color-200);
+
+  margin-top: 2px;
+}
+
+#card-4 .middle .left div:first-child .key::before {
+  color: var(--icon-color-100);
+  transform: matrix(1,0,0,-1,0,0);
+
+  margin-bottom: 8px;
+}
