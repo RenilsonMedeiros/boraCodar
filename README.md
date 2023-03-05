@@ -14,3 +14,4 @@ Então vamos conhecer os projetos desenvolvidos por mim:
 * [**Calculadora**](https://github.com/RenilsonMedeiros/boraCodar/tree/master/calculadora)
 * [**Cartão de Embarque**](https://github.com/RenilsonMedeiros/boraCodar/tree/master/cartao-de-embarque)
 * [**Encontre seu bloco de carnaval**](https://github.com/RenilsonMedeiros/boraCodar/tree/master/site-carnaval)
+* [**Dashboard**](https://github.com/RenilsonMedeiros/boraCodar/tree/master/dashboard)
